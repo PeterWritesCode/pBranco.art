@@ -1,0 +1,31 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .main_items_container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+  }
+  
+  .main_items_container .main_items_container_child {
+    width: 50%;
+    height: 100vh;
+  }
+  
+  .container-content-block {
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
