@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Garamond;
+  src: "./media/Garamond.ttf";
+}
+
 .App {
     font-family: sans-serif;
     text-align: center;
@@ -9,6 +14,7 @@
   }
   
   .main_items_container {
+    user-select: none;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -16,16 +22,30 @@
     position: fixed;
   }
   
+  .container-content.left{
+    
+    background-color: black;
+    color:white;
+  }
+  .container-content.right{
+    max-width:60%;
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:justify;
+    font-family:Garamond;
+  }
   .main_items_container .main_items_container_child {
     width: 50%;
     height: 100vh;
   }
   
+  img{
+    width: 60%
+  }
   .container-content-block {
-    height: 80px;
-    border: 1px solid black;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
