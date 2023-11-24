@@ -1,3 +1,4 @@
+@media screen and (max-width: 1920px){
 @font-face {
   font-family: Garamond;
   src: "./media/Garamond.ttf";
@@ -10,7 +11,7 @@ body {
 }
 
 .main_items_container {
-  z-index:0;
+  z-index:1;
   user-select: none;
   width: 100vw;
   display: flex;
@@ -20,7 +21,7 @@ body {
 }
 
 .container-content.left{
-  z-index:0;
+  z-index:1;
   background-color: black;
   color:white;
 }
@@ -143,4 +144,180 @@ img{
   fill: black;
 }
 
+.modal-content-warning {
+  position:absolute;
+  z-index:0;
+  top:500%;
+}
+
+.modal-contentD {
+  z-index:3;
+  position: absolute;
   
+  font-family:Garamond;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #98AFC7;
+  padding: 14px 28px;
+  border-radius: 3px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  height:50vw;
+  width:50vw;
+}
+
+.modal-contactsd{
+  position:absolute;
+  top:10%;
+  width:40%;
+}
+
+.modal-content-aboutD {
+  z-index:3;
+  position: absolute;
+  font-family:Garamond;
+  text-align:center;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #98AFC7;
+  padding: 14px 28px;
+  border-radius: 3px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  height:60vw;
+  width:60vw;
+}
+
+.modal-aboutd{
+  position:absolute;
+  top:10%;
+  width:40%;
+}
+
+.close-divD{
+  display:flex;
+  justify-content:center;
+  position:absolute;
+  bottom:5%;
+}
+.closed{
+  
+  width:20%
+}
+.texto{
+  align-items:center;
+  display:flex;
+  justify-content: center;
+  text-align:center;
+}
+
+a{
+  color:black;
+  text-decoration: none;
+}
+}
+
+@media screen and (max-width: 1080px){
+
+.modal-content-warning {
+  top:36%;
+  z-index:3;
+  position: absolute;
+  font-family:Garamond;
+  text-align:center;
+  line-height: 1.4;
+  background: #98AFC7;
+  padding: 14px 28px;
+  border-radius: 3px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  height:25vw;
+  width:25vw;
+}
+
+.modal-warning{
+  position:absolute;
+  top:10%;
+  width:80%;
+}
+
+.namedD{
+  position:relative;
+  left: 30%;
+  top:59%;
+  width:40%;  
+  
+}
+
+.nameD{
+
+  width:90%;
+}
+
+.artdD{
+  position:relative;
+  left: 37%;
+  top:59%;
+  width:25%;  
+}
+.artD{
+  width:80%;
+}
+
+.minidD{
+  position:relative;
+  left: 36.4%;
+  top:59%;
+  width:25%;  
+  padding-top:1%;
+  padding-bottom:0.3%;
+
+}
+.miniD{
+  padding-top:1%;
+  padding-bottom:0.3%;
+  width:80%;
+}
+
+.commsdD{
+  position:relative;
+  left: 36%;
+  top:59%;
+  width:28%;
+  padding-bottom:0.3%;
+}
+.commsD{
+  padding-bottom:0.3%;
+  width:80%;
+}
+
+.aboutdD{
+  position:relative;
+  left: 35%;
+  top:59%;
+  width:29%;
+  padding-bottom:1%;
+}
+.aboutD{
+  padding-bottom:1%;
+  width:84%;
+}
+
+.contactsdD{
+  position:relative;
+  left: 36%;
+  top:59%;
+  width:26%;
+}
+.contactsD{
+  width:81%;
+
+}
+.close-divW{
+  position:absolute;
+  top:75%;
+}
+}

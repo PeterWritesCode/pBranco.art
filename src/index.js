@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import Art from "./Art";
+import Not from "./Not";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
@@ -10,6 +11,8 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/art" element={<Art />} />
+        <Route path="/miniatures" element={<Not />}/>
+        <Route path="/commissions" element={<Not />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

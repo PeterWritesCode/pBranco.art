@@ -1,4 +1,5 @@
 import React from "react";
+import {useState} from "react";
 import capa from "./media/comic/Capa.jpg"
 import cabra40 from"./media/comic/CAPA TOP ZIXO.png";
 import tacho from "./media/comic/cartoon.jpg";
@@ -11,7 +12,10 @@ import mini from "./media/mini.png";
 import comms from "./media/comms.png";
 import about from "./media/about.png";
 import contacts from "./media/contacts.png";
+import close from "./media/close.png";
+import mobile from "./media/mobile.png";
 import Draggable from "react-draggable";
+
 
 import { useNavigate } from "react-router-dom";
 
@@ -19,6 +23,28 @@ import { useNavigate } from "react-router-dom";
 export default function MainItemsContainer(props){
   let isDragging = false;
   const navigate = useNavigate();
+
+  const [modalWarning, setModalW] = useState(true);
+  const [modalAbout, setModalAb] = useState(false);
+  const [modalContacts, setModal] = useState(false);
+
+  const toggleModalW = () => {
+    if(!isDragging){
+      setModalW(false);
+    }
+  }
+  const toggleModalAb = () => {
+    if(!isDragging){
+      setModalAb(!modalAbout);
+    }
+  }
+
+  const toggleModal = () => {
+    if(!isDragging){
+      setModal(!modalContacts);
+    }
+      
+  }
 
   function onDrag(e) {
     console.log("onDrag");
@@ -48,18 +74,32 @@ export default function MainItemsContainer(props){
   }
   function onClickContacts(e) {
     if (!isDragging) {
-      navigate("/contacts")
+      toggleModal();
     }
   }
   function onClickAbout(e) {
     if (!isDragging) {
-      navigate("/about")
+      toggleModalAb();
     }
   }
   function onClickIndex(e) {
     if (!isDragging) {
       navigate("/")
     }
+  }
+
+  function onClickClose(e) {
+    if (!isDragging) {
+      toggleModal();
+    }
+  }
+  function onClickCloseAb(e) {
+    if (!isDragging) {
+      toggleModalAb();
+    }
+  }
+  function onClickCloseWarning(e){
+    toggleModalW();
   }
 
 
@@ -151,6 +191,58 @@ export default function MainItemsContainer(props){
           </div>
         </Draggable> 
         </div>
+        {modalContacts && (
+          <Draggable onStop={onStop} onDrag={onDrag}>
+          <div className="modal-contentD">
+            <img className="modal-contactsd" alt="modal-contacts" draggable="false" src={contacts}></img>
+            <div className="texto">
+              <text>
+
+                <strong>E-mail:</strong><br></br> pedrombrancomendes@gmail.com
+                <br></br>
+                <a href="https://www.instagram.com/pbrancoart"><strong>Instagram:</strong><br></br> @pbrancoart</a>
+                <br></br>
+                <strong>LinkedIn:</strong><br></br> pedro-branco-mendes
+
+              </text>
+            </div>
+            
+            <div className="close-divD" onClick={onClickClose} >
+            <img className="closed" draggable="false" src={close}></img>
+            </div>
+          </div>
+          </Draggable>
+        )}
+        {modalAbout && (
+          <Draggable onStop={onStop} onDrag={onDrag}>
+          <div className="modal-content-aboutD">
+            <img className="modal-aboutd" alt="modal-about" draggable="false" src={about}></img>
+            
+            <text>
+            <br></br>
+            <strong>Hey! I am Pedro.</strong><br></br>
+
+I am from Portugal, currently 22.<br></br>
+I am an artist, currently studying for my Masters in Design and Multimedia in University of Coimbra, from which I have already gotten a Bachelor's in Informatics Engineering.
+<br></br>I love comics, books, drawing, Warhammer and anything miniatures related.
+<br></br>In the future, I hope that the last page of my books say that I am happy and live with a beautiful wife and a dog, like all the legends do.
+              
+            </text>
+            <div className="close-divD" onClick={onClickCloseAb} >
+            <img className="closed" draggable="false" src={close}></img>
+            </div>
+          </div>
+          </Draggable>
+        )}
+        {modalWarning && (
+          <div className="modal-content-warning" onClick={onClickCloseWarning}>
+            <img className="modal-warning" alt="modal-warning" draggable="false" src={mobile}></img>
+            <div className="close-divW" >
+              <img className="closedW" draggable="false" src={close}></img>
+            </div>
+          </div>
+          
+        )}
         
       </div>
   )
