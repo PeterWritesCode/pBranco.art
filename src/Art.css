@@ -3,49 +3,144 @@
   src: "./media/Garamond.ttf";
 }
 
-.App {
-    font-family: sans-serif;
-    text-align: center;
-  }
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.main_items_container {
+  z-index:0;
+  user-select: none;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+
+.container-content.left{
+  z-index:0;
+  background-color: black;
+  color:white;
+}
+.container-content.right{
+  z-index:1;
+  max-width:60%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  align-items:center;
+  justify-content:center;
+  text-align:justify;
+  font-family:Garamond;
+}
+.main_items_container .main_items_container_child {
+  z-index:2;
+  width: 50%;
+  height: 100vh;
+}
+
+img{
+  z-index:2;
+  width: 60%
+}
+.container-content-block {
+  z-index:1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContainerD{
+  z-index:3;
+  user-select: none;
+  position: absolute;
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  top:0%;
+  justify-content: right;
+  align-items: center;
+  flex-direction:column;
+  height: 100%; 
+  width: 100%;
+}
+
+.namedD{
+  position:relative;
+  left: 37%;
+  top:59%;
+  width:40%;  
   
-  body {
-    padding: 0px;
-    margin: 0px;
-  }
+}
+
+.nameD{
+
+  width:60%;
+}
+
+.artdD{
+  position:relative;
+  left: 44%;
+  top:59%;
+  width:25%;  
+}
+.artD{
+  width:40%;
+}
+
+.minidD{
+  position:relative;
+  left: 43.4%;
+  top:59%;
+  width:25%;  
+  padding-top:1%;
+  padding-bottom:0.3%;
+
+}
+.miniD{
+  padding-top:1%;
+  padding-bottom:0.3%;
+  width:40%;
+}
+
+.commsdD{
+  position:relative;
+  left: 44.5%;
+  top:59%;
+      width:28%;
+  padding-bottom:0.3%;
+}
+.commsD{
+  padding-bottom:0.3%;
+  width:28%;
+}
+
+.aboutdD{
+  position:relative;
+  left: 42%;
+  top:59%;
+  width:29%;
+  padding-bottom:1%;
+}
+.aboutD{
+  padding-bottom:1%;
+  width:44%;
+}
+
+.contactsdD{
+  position:relative;
+  left: 43%;
+  top:59%;
+  width:26%;
+}
+.contactsD{
+  width:41%;
+}
+img{
+  fill: black;
+}
+
   
-  .main_items_container {
-    user-select: none;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-  }
-  
-  .container-content.left{
-    
-    background-color: black;
-    color:white;
-  }
-  .container-content.right{
-    max-width:60%;
-    display:inline-block;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:justify;
-    font-family:Garamond;
-  }
-  .main_items_container .main_items_container_child {
-    width: 50%;
-    height: 100vh;
-  }
-  
-  img{
-    width: 60%
-  }
-  .container-content-block {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }

@@ -5,27 +5,68 @@ import tacho from "./media/comic/cartoon.jpg";
 import smtuc from "./media/comic/smtuc.png";
 import twd from "./media/comic/1690906335597.png";
 import spider from "./media/comic/1690906012585.png";
+import name from "./media/name.png";
+import art from "./media/art.png";
+import mini from "./media/mini.png";
+import comms from "./media/comms.png";
+import about from "./media/about.png";
+import contacts from "./media/contacts.png";
+import Draggable from "react-draggable";
 
-class MainItemsContainer extends React.Component {
-  render() {
-    console.log(this.props.deltaY);
-    let style_first = {
-      transform: `translateY(-${this.props.maxDelta - this.props.deltaY}px)`
-    };
+import { useNavigate } from "react-router-dom";
 
-    let style_second = {
-      transform: `translateY(-${this.props.deltaY}px)`
-    };
 
-    const numbers = [];
-    for (let i = 0; i < 30; i++) {
-      numbers.push(i + 1);
+export default function MainItemsContainer(props){
+  let isDragging = false;
+  const navigate = useNavigate();
+
+  function onDrag(e) {
+    console.log("onDrag");
+    isDragging = true;
+  }
+
+  function onStop(e) {
+    console.log("onStop");
+    setTimeout(() => (isDragging = false), 0);
+  }
+
+  function onClickArt(e) {
+    if (!isDragging) {
+      navigate("/art")
     }
+  }
+  function onClickMinis(e) {
+    if (!isDragging) {
+      navigate("/miniatures")
+    }
+  }
+  
+  function onClickComms(e) {
+    if (!isDragging) {
+      navigate("/commissions")
+    }
+  }
+  function onClickContacts(e) {
+    if (!isDragging) {
+      navigate("/contacts")
+    }
+  }
+  function onClickAbout(e) {
+    if (!isDragging) {
+      navigate("/about")
+    }
+  }
+  function onClickIndex(e) {
+    if (!isDragging) {
+      navigate("/")
+    }
+  }
 
-    return (
+
+  return (
       <div className="main_items_container">
         <section className="main_items_container_child">
-          <div className="container-content left"  style={style_first}>
+          <div className="container-content left"  style={props.styleFirst}>
           <div className="container-content-block">
               <img className="smtuc" draggable="false"src={smtuc}></img>
             </div>
@@ -50,7 +91,7 @@ class MainItemsContainer extends React.Component {
           </div>
         </section>
         <section className="main_items_container_child">
-          <div className="container-content right" style={style_second}>
+          <div className="container-content right" style={props.styleSecond}>
            
             
             <div className="container-content-block">
@@ -78,9 +119,39 @@ class MainItemsContainer extends React.Component {
             
           </div>
         </section>
+        <div className="ContainerD" >
+        <Draggable onStop={onStop} onDrag={onDrag}>
+          <div className="artdD" onClick={onClickArt}>
+            <img className="artD" draggable="false" src={art} alt="art"></img>
+          </div>
+        </Draggable>
+        <Draggable onStop={onStop} onDrag={onDrag}>
+          <div className="minidD" onClick={onClickMinis}>
+            <img className="miniD" draggable="false" src={mini} alt="mini"></img>
+          </div>
+        </Draggable>
+        <Draggable onStop={onStop} onDrag={onDrag}>
+          <div className="commsdD" onClick={onClickComms}>
+            <img className="commsD" draggable="false" src={comms} alt="comms"></img>
+          </div>
+        </Draggable>
+        <Draggable onStop={onStop} onDrag={onDrag}>
+          <div className="aboutdD" onClick={onClickAbout}>
+            <img className="aboutD" draggable="false" src={about}alt="about"></img>
+          </div>
+        </Draggable>
+        <Draggable onStop={onStop} onDrag={onDrag}>
+          <div className="contactsdD" onClick={onClickContacts}>
+            <img className="contactsD" draggable="false" src={contacts} alt="contacts"></img>
+          </div>
+        </Draggable> 
+        <Draggable onStop={onStop} onDrag={onDrag}>
+          <div className="namedD" onClick={onClickIndex}>
+            <img className="nameD" draggable="false" src={name} alt="name"></img>
+          </div>
+        </Draggable> 
+        </div>
+        
       </div>
-    );
-  }
+  )
 }
-
-export default MainItemsContainer;

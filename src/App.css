@@ -12,24 +12,19 @@ video{
 }
 
 .App {
-  position: relative;
-}
-
-.Titulo {
-  user-select:none;
-  
   position: absolute;
-  left: 0;
-  top: 0;
 }
 
-.Container {
+
+
+.Container{
+  z-index:3;
   user-select: none;
   position: absolute;
   font-family: sans-serif;
   text-align: center;
   display: flex;
-  top:13%;
+  top:0%;
   justify-content: center;
   align-items: center;
   flex-direction:column;
@@ -38,33 +33,67 @@ video{
 }
 .Titulo{
   top:1%;
-  position:absolute;
-  z-index:1;
-  display:flex;
-  justify-content: center;
 
+  z-index:1;
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 .name{
   
-  width:80%;
+  width:70%;
 }
 
+.artd{
+  position:relative;
+  top:13%;
+  width:40%;  
+}
 .art{
-  
   width:40%;
+}
+
+.minid{
+  position:relative;
+  top:13%;
+  width:40%;  
+  padding-top:1%;
+  padding-bottom:0.3%;
+
 }
 .mini{
   padding-top:1%;
   padding-bottom:0.3%;
   width:40%;
 }
+
+.commsd{
+  position:relative;
+  top:13%;
+  width:43%;
+  padding-bottom:0.3%;
+}
 .comms{
   padding-bottom:0.3%;
   width:43%;
 }
+
+.aboutd{
+  position:relative;
+  top:13%;
+  width:44%;
+  padding-bottom:1%;
+}
 .about{
   padding-bottom:1%;
   width:44%;
+}
+
+.contactsd{
+  position:relative;
+  top:13%;
+  width:41%;
 }
 .contacts{
   width:41%;

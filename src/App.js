@@ -17,7 +17,6 @@ export default function App() {
   let isDragging = false;
 
   function onDrag(e) {
-    
     console.log("onDrag");
     isDragging = true;
   }
@@ -58,36 +57,37 @@ export default function App() {
     <div className="App">
       <video src={videoBG} autoPlay loop muted/>
     
+      
+      
+      <div className="Container">
       <div className="Titulo">
         <img draggable="false" className="name" src={name}></img>
       </div>
-
-      <div className="Container">
         <Draggable onStop={onStop} onDrag={onDrag}>
-          <div className="art" onClick={onClickArt}>
+          <div className="artd" onClick={onClickArt}>
             <img className="art" draggable="false" src={art}></img>
           </div>
         </Draggable>
         <Draggable onStop={onStop} onDrag={onDrag}>
-          <div className="mini  " onClick={onClickMinis}>
+          <div className="minid" onClick={onClickMinis}>
             <img className="mini" draggable="false" src={mini}></img>
           </div>
         </Draggable>
         <Draggable onStop={onStop} onDrag={onDrag}>
-          <div className="comms" onClick={onClickComms}>
+          <div className="commsd" onClick={onClickComms}>
             <img className="comms" draggable="false" src={comms}></img>
           </div>
         </Draggable>
         <Draggable onStop={onStop} onDrag={onDrag}>
-          <div className="about" onClick={onClickComms}>
+          <div className="aboutd" onClick={onClickComms}>
             <img className="about" draggable="false" src={about}></img>
           </div>
         </Draggable>
         <Draggable onStop={onStop} onDrag={onDrag}>
-          <div className="contacts" onClick={onClickComms}>
+          <div className="contactsd" onClick={onClickComms}>
             <img className="contacts" draggable="false" src={contacts}></img>
           </div>
-        </Draggable>
+        </Draggable> 
       </div>
     </div>
   );

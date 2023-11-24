@@ -1,107 +1,54 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import {useEffect, useState, useCallback} from "react";
+
 import MainItemsContainer from "./MainItemsContainer";
 import jquery from "jquery";
-import art from "./media/art.png";
-import name from "./media/name.png";
-import mini from "./media/mini.png";
-import comms from "./media/comms.png";
-import about from "./media/about.png";
-import contacts from "./media/contacts.png";
-import { withRouter } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
 
 import "./Art.css";
 
-class Art extends React.Component {
+export default function Art() {
   
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      deltaY: 0,
-      maxDelta: 0
-    };
-  }
-
-  componentDidMount() {
-    // ... existing code
-
-    // The navigate function is now available through this.props
-    
-  }
   
-  componentDidMount() {
-    // IE, Chrome, Safari, Opera
-    window.addEventListener("wheel", this.scrollHandler);
+  const [deltaY, setDeltaY] = useState(0)
+  const [maxDelta, setMaxDelta] = useState(0)
 
-    // Firefox
-    window.addEventListener("DOMMouseScroll", this.scrollHandler);
+  
+
+  const scrollHandler = useCallback(event => {
+    setDeltaY(currentDeltaY => {
+      let newDeltaY = currentDeltaY + event.deltaY*0.5;
+
+      newDeltaY = Math.max(0, newDeltaY);
+      newDeltaY = Math.min(maxDelta, newDeltaY);
+
+      return newDeltaY;
+    });
+  }, [maxDelta])
+
+  useEffect(() => {
+    window.addEventListener("wheel", scrollHandler);
 
     const maxDelta = jquery(".container-content").height() - window.innerHeight;
 
-    this.setState({
-      maxDelta
-    });
+    setMaxDelta(maxDelta);
 
-    jquery(".container-content.left").css(
-      "transform",
-      `translateY(-${jquery(".container-content").height()}px)`
-    );
+    return () => {
+      window.removeEventListener("wheel", scrollHandler);
+    }
+  }, [scrollHandler])
 
-    this.navigate = this.props.history.push;
-  }
-
-  scrollHandler = event => {
-    
-    this.setState(state => {
-      let newDeltaY = state.deltaY + event.deltaY;
-
-      newDeltaY = Math.max(0, newDeltaY);
-      newDeltaY = Math.min(this.state.maxDelta, newDeltaY);
-
-      return {
-        deltaY: newDeltaY
-      };
-    });
-   
+  let style_first = {
+    transform: `translateY(-${maxDelta - deltaY}px)`
   };
- 
-  
 
-  render() {
-    
-    
-    
+  let style_second = {
+    transform: `translateY(-${deltaY}px)`
+  };
 
-    return (
+  return (
+    <div className="App">
+      <MainItemsContainer styleFirst={style_first} styleSecond={style_second}/>
       
-      <div className="App">
-        <MainItemsContainer {...this.state} />
-        <div className="Container">
-          <div className="art" onClick={() => this.navigate("/art")}>
-            <img alt="art" className="art" draggable="false" src={art}></img>
-          </div>
-          <div className="mini  " onClick={() => this.navigate("/miniatures")}>
-            <img alt="mini" className="mini" draggable="false" src={mini}></img>
-          </div>
-          <div className="comms" onClick={() => this.navigate("/commissions")}>
-            <img alt="comms" className="comms" draggable="false" src={comms}></img>
-          </div>
-          <div className="about" onClick={() => this.navigate("/about")}>
-            <img alt="about" className="about" draggable="false" src={about}></img>
-          </div>
-          <div className="contacts" onClick={() => this.navigate("/contacts")}>
-            <img alt="contacts" className="contacts" draggable="false" src={contacts}></img>
-          </div>
-      </div>
-      </div>
-      
-    );
-  }
+    </div>
+  )
 }
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<Art />, rootElement);
-
-export default withRouter(Art);
