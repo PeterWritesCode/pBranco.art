@@ -123,7 +123,8 @@ export default function App() {
               
               <strong>E-mail:</strong><br></br> pedrombrancomendes@gmail.com
               <br></br>
-              <a href="https://www.instagram.com/pbrancoart"><strong>Instagram:</strong><br></br> @pbrancoart</a>
+              <strong>Instagram:</strong><br></br> 
+              <a draggable="false" href="https://www.instagram.com/pbrancoart">@pbrancoart</a>
               <br></br>
               <strong>LinkedIn:</strong><br></br> pedro-branco-mendes
               

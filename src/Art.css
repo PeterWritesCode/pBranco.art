@@ -152,20 +152,23 @@ img{
 
 .modal-contentD {
   z-index:3;
-  position: absolute;
-  
   font-family:Garamond;
+  position: absolute;
+  top: 40%;
+  margin-left:auto;
+  margin-right:auto;
   transform: translate(-50%, -50%);
-  line-height: 1.4;
-  background: #98AFC7;
+  line-height: 1.4; 
+  background-color: #98AFC7;
   padding: 14px 28px;
-  border-radius: 3px;
+  border-radius:3px;
   display:flex;
   justify-content: center;
   align-items:center;
-  height:50vw;
-  width:50vw;
+  height:20vw;
+  width:20vw;
 }
+
 
 .modal-contactsd{
   position:absolute;
@@ -175,24 +178,28 @@ img{
 
 .modal-content-aboutD {
   z-index:3;
-  position: absolute;
   font-family:Garamond;
+  position: absolute;
+  top: 30%;
+  margin-left:auto;
+  margin-right:auto;
   text-align:center;
   transform: translate(-50%, -50%);
-  line-height: 1.4;
-  background: #98AFC7;
+  line-height: 1.4; 
+  background-color: #98AFC7;
   padding: 14px 28px;
-  border-radius: 3px;
+  border-radius:3px;
   display:flex;
   justify-content: center;
   align-items:center;
-  height:60vw;
-  width:60vw;
+  height:25vw;
+  width:25vw;
 }
+
 
 .modal-aboutd{
   position:absolute;
-  top:10%;
+  top:7%;
   width:40%;
 }
 
@@ -220,6 +227,52 @@ a{
 }
 
 @media screen and (max-width: 1080px){
+
+  .modal-contentD {
+    z-index:3;
+    position: absolute;
+    
+    font-family:Garamond;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #98AFC7;
+    padding: 14px 28px;
+    border-radius: 3px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:50vw;
+    width:50vw;
+  }
+  
+  .modal-contactsd{
+    position:absolute;
+    top:10%;
+    width:40%;
+  }
+  
+  .modal-content-aboutD {
+    z-index:3;
+    position: absolute;
+    font-family:Garamond;
+    text-align:center;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #98AFC7;
+    padding: 14px 28px;
+    border-radius: 3px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:60vw;
+    width:60vw;
+  }
+  
+  .modal-aboutd{
+    position:absolute;
+    top:10%;
+    width:40%;
+  }
 
 .modal-content-warning {
   top:36%;
