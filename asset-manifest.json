@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pBrancoart/static/css/main.d600f887.css",
-    "main.js": "/pBrancoart/static/js/main.62ae960e.js",
+    "main.js": "/pBrancoart/static/js/main.b5b9921d.js",
     "static/media/carantonha.mp4": "/pBrancoart/static/media/carantonha.997d0a7e691168e543a3.mp4",
     "static/media/smtuc.png": "/pBrancoart/static/media/smtuc.b57e730ace7ec6c8de0e.png",
     "static/media/CAPA TOP ZIXO.png": "/pBrancoart/static/media/CAPA TOP ZIXO.b50a272fe3b51edf5727.png",
@@ -18,10 +18,10 @@
     "static/media/close.png": "/pBrancoart/static/media/close.3a5383a81c880d376e88.png",
     "index.html": "/pBrancoart/index.html",
     "main.d600f887.css.map": "/pBrancoart/static/css/main.d600f887.css.map",
-    "main.62ae960e.js.map": "/pBrancoart/static/js/main.62ae960e.js.map"
+    "main.b5b9921d.js.map": "/pBrancoart/static/js/main.b5b9921d.js.map"
   },
   "entrypoints": [
     "static/css/main.d600f887.css",
-    "static/js/main.62ae960e.js"
+    "static/js/main.b5b9921d.js"
   ]
 }
