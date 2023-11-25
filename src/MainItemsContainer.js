@@ -191,6 +191,7 @@ export default function MainItemsContainer(props){
           </div>
         </Draggable> 
         </div>
+        
         {modalContacts && (
           <Draggable onStop={onStop} onDrag={onDrag}>
           <div className="modal-contentD">
