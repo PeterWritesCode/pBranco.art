@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/pBranco.art/static/css/main.d600f887.css",
-    "main.js": "/pBranco.art/static/js/main.a0752818.js",
-    "static/media/carantonha.mp4": "/pBranco.art/static/media/carantonha.997d0a7e691168e543a3.mp4",
-    "static/media/smtuc.png": "/pBranco.art/static/media/smtuc.b57e730ace7ec6c8de0e.png",
-    "static/media/CAPA TOP ZIXO.png": "/pBranco.art/static/media/CAPA TOP ZIXO.b50a272fe3b51edf5727.png",
-    "static/media/1690906335597.png": "/pBranco.art/static/media/1690906335597.0d5ad9161abe40a9e5f9.png",
-    "static/media/1690906012585.png": "/pBranco.art/static/media/1690906012585.9d6a5fd3ff60f6a8cf3d.png",
-    "static/media/cartoon.jpg": "/pBranco.art/static/media/cartoon.9f4521c8f3100e1d4e66.jpg",
-    "static/media/Capa.jpg": "/pBranco.art/static/media/Capa.df6d57297e26b3ef8857.jpg",
-    "static/media/mobile.png": "/pBranco.art/static/media/mobile.23806f8f3ea97158c50d.png",
-    "static/media/notyet.png": "/pBranco.art/static/media/notyet.a6e780cc702859827d28.png",
-    "static/media/mini.png": "/pBranco.art/static/media/mini.510e10dbb5213a568d7d.png",
-    "static/media/comms.png": "/pBranco.art/static/media/comms.e2c288d6b9053d81a17c.png",
-    "static/media/name.png": "/pBranco.art/static/media/name.a2c1a861ecd6930d58ab.png",
-    "static/media/contacts.png": "/pBranco.art/static/media/contacts.cd7c647ab41a44a02a44.png",
-    "static/media/close.png": "/pBranco.art/static/media/close.3a5383a81c880d376e88.png",
-    "index.html": "/pBranco.art/index.html",
-    "main.d600f887.css.map": "/pBranco.art/static/css/main.d600f887.css.map",
-    "main.a0752818.js.map": "/pBranco.art/static/js/main.a0752818.js.map"
+    "main.css": "/pBrancoart/static/css/main.d600f887.css",
+    "main.js": "/pBrancoart/static/js/main.62ae960e.js",
+    "static/media/carantonha.mp4": "/pBrancoart/static/media/carantonha.997d0a7e691168e543a3.mp4",
+    "static/media/smtuc.png": "/pBrancoart/static/media/smtuc.b57e730ace7ec6c8de0e.png",
+    "static/media/CAPA TOP ZIXO.png": "/pBrancoart/static/media/CAPA TOP ZIXO.b50a272fe3b51edf5727.png",
+    "static/media/1690906335597.png": "/pBrancoart/static/media/1690906335597.0d5ad9161abe40a9e5f9.png",
+    "static/media/1690906012585.png": "/pBrancoart/static/media/1690906012585.9d6a5fd3ff60f6a8cf3d.png",
+    "static/media/cartoon.jpg": "/pBrancoart/static/media/cartoon.9f4521c8f3100e1d4e66.jpg",
+    "static/media/Capa.jpg": "/pBrancoart/static/media/Capa.df6d57297e26b3ef8857.jpg",
+    "static/media/mobile.png": "/pBrancoart/static/media/mobile.23806f8f3ea97158c50d.png",
+    "static/media/notyet.png": "/pBrancoart/static/media/notyet.a6e780cc702859827d28.png",
+    "static/media/mini.png": "/pBrancoart/static/media/mini.510e10dbb5213a568d7d.png",
+    "static/media/comms.png": "/pBrancoart/static/media/comms.e2c288d6b9053d81a17c.png",
+    "static/media/name.png": "/pBrancoart/static/media/name.a2c1a861ecd6930d58ab.png",
+    "static/media/contacts.png": "/pBrancoart/static/media/contacts.cd7c647ab41a44a02a44.png",
+    "static/media/close.png": "/pBrancoart/static/media/close.3a5383a81c880d376e88.png",
+    "index.html": "/pBrancoart/index.html",
+    "main.d600f887.css.map": "/pBrancoart/static/css/main.d600f887.css.map",
+    "main.62ae960e.js.map": "/pBrancoart/static/js/main.62ae960e.js.map"
   },
   "entrypoints": [
     "static/css/main.d600f887.css",
-    "static/js/main.a0752818.js"
+    "static/js/main.62ae960e.js"
   ]
 }
